@@ -12,10 +12,12 @@ import retrofit2.http.Query;
  */
 
 interface ApiInterface {
-//
-//    @GET("someUrl/{id}")
-//    Call<MoviesResponse> getSomeCall(@Path("id") int id, @Query("queryId") String someQuery);
 
-    @GET("latest")
-    Call<JsonObject> getResponse();
+    @GET("latest")//here is the left url part
+    Call<JsonObject> getResponse();//this function you have the option to name it all you need to take care is the return Object
+
+
+    //in case you want to use a path parameter or query parameter this commented code might help :)
+//    @GET("someUrl/{id}")
+//    Call<SomeResponse> getSomeCall(@Path("id") int id, @Query("queryId") String someQuery);
 }
