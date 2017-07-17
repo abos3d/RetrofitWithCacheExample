@@ -1,9 +1,8 @@
 package com.tecandmore.retrofitexample;
 
 import android.app.ProgressDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.ButtonBarLayout;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +11,6 @@ import android.widget.Toast;
 
 import com.google.gson.JsonObject;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
@@ -60,9 +58,8 @@ public class MainActivity extends AppCompatActivity {
     private void createNetworkComponents() {
 
         /**Create cache*/
-        File httpCache = new File(getApplicationContext().getCacheDir(), "http-cache");
-        int cacheSize = 10 * 1024 * 1024;
-        Cache cache = new Cache(httpCache, cacheSize);
+        int cacheSize = 10 * 1024 * 1024; // 10 MiB
+        Cache cache = new Cache(getApplication().getCacheDir(), cacheSize);
         /**cache created*/
 
 
